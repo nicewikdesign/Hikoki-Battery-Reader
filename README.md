@@ -14,10 +14,12 @@ Lockout Reset: Includes a function to clear software-based lockout flags (use wi
 Hardware Setup
 To communicate with the battery, you need to interface with its proprietary inverted UART protocol (9600 baud).
 Wiring Diagram
-Battery Pin	    ESP32-S3 Pin	       Note
-GND (-)	           GND	          Common Ground
-                 GPIO 16	        Main Communication Line
-                 GPIO 17 & 18	    TX / Inverted TX lines
+### Wiring Diagram
+| Battery Pin | ESP32-S3 Pin | Note |
+| :--- | :--- | :--- |
+| **GND (-)** | **GND** | Common Ground |
+| **Signal (Purple)** | **GPIO 16** | Main Communication Line |
+| **Signal (Purple)** | **GPIO 17 & 18** | TX / Inverted TX lines |
 
 Critical Component: The Pull-Up Resistor
 Because the battery uses an open-collector style communication, you MUST use a pull-up resistor for the signal to be readable by the ESP32:
