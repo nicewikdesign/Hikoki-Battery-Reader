@@ -1,4 +1,6 @@
 # Hikoki-Battery-Reader
+[![Buy Me A Coffee](https://img.shields.shields.shields.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/nicewikdesign)
+
 Hikoki MultiVolt Battery Diagnostic Tool (ESP32-S3)
 This project provides an advanced diagnostic interface for Hikoki / Metabo HPT MultiVolt (36V/18V) batteries using the ESP32-S3. It allows you to monitor cell health, cycle counts, and internal BMS error logs.
 
