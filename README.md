@@ -1,2 +1,27 @@
 # Hikoki-Battery-Reader
 Hikoki MultiVolt Battery Diagnostic Tool (ESP32-S3)
+This project provides an advanced diagnostic interface for Hikoki / Metabo HPT MultiVolt (36V/18V) batteries using the ESP32-S3. It allows you to monitor cell health, cycle counts, and internal BMS error logs.
+
+    Note: This version is specifically optimized for the ESP32-S3 hardware timers and high clock speeds.
+    
+Features
+Real-time Cell Voltage: Monitor all 10 cells (2 banks of 5 cells).
+Health Metrics: Check charge cycle counts and total runtime (18V vs 36V modes).
+BMS Error Logs: Access internal error history (Unbalance, Overcharge, Over-temp).
+Hardware Info: Production date, serial number, and exact battery model.
+Lockout Reset: Includes a function to clear software-based lockout flags (use with extreme caution).
+
+Hardware Setup
+To communicate with the battery, you need to interface with its proprietary inverted UART protocol (9600 baud).
+Wiring Diagram
+Battery Pin	    ESP32-S3 Pin	       Note
+GND (-)	           GND	          Common Ground
+                 GPIO 16	        Main Communication Line
+                 GPIO 17 & 18	    TX / Inverted TX lines
+
+Critical Component: The Pull-Up Resistor
+Because the battery uses an open-collector style communication, you MUST use a pull-up resistor for the signal to be readable by the ESP32:
+  4.7kΩ Resistor connected between GPIO 16 and 3.3V.
+
+Safety Warning
+Lithium-ion batteries can be dangerous. This tool allows access to internal BMS functions. Resetting a lockout or attempting to charge an unbalanced battery can lead to fire, explosion, or permanent damage. Always verify cell voltages manually if the BMS reports an unbalance. Use this software at your own risk.
