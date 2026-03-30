@@ -45,6 +45,14 @@ The program waits for your input. Type one of the following keys into the comman
 | **`P`** | **Deep Sleep** | Puts the ESP32-S3 into low power mode to save energy |
 
 > **💡 Pro Tip:** If the battery does not respond, press the **LED battery indicator button** on the battery housing to wake up the internal BMS before sending a command.
+---
+
+## ☕ Support my work
+If this tool saved your battery (and your money!), consider supporting the project. Your donations help me buy more broken batteries to reverse-engineer new protocols and improve the software.
+
+* **[Support me on Buy Me a Coffee](https://buymeacoffee.com/nicewikdesign)**
+
+Thank you for being part of the community! 🚀
 
 
 Safety Warning
